@@ -1,0 +1,10 @@
+name: ${project.name}
+main: org.morganm.antifortune.AntiFortune
+url: ${project.url}
+version: ${project.version}
+author: morganm
+softdepend: [Vault, WorldEdit, Permissions, PermissionsEx]
+permissions:
+    antifortune.override:
+        description: Exempts a user from the effects of antifortune
+        default: op
