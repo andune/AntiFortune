@@ -47,7 +47,9 @@ public class BukkitListener implements Listener {
 	@EventHandler
 	public void onBlockBreakEvent(BlockBreakEvent event) {
 		ItemStack item = event.getPlayer().getItemInHand();
-		if( item != null )
-			item.removeEnchantment(Enchantment.LOOT_BONUS_BLOCKS);
+		if( item != null ) {
+			if( item.containsEnchantment(Enchantment.LOOT_BONUS_BLOCKS) )
+				item.removeEnchantment(Enchantment.LOOT_BONUS_BLOCKS);
+		}
 	}
 }
